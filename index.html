@@ -1,102 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroSorb</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #5a8f3f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            background-color: white;
-            margin: 10px auto;
-            max-width: 1200px;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #4a4a4a;
-        }
-        .carrusel {
-            height: 300px;
-            background-color: #ddd;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        .integrantes img {
-            height: 100px;
-            width: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .integrantes div {
-            margin-bottom: 10px;
-        }
-        .indice ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .indice ul li {
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroSorb - Soluciones Naturales para la Contaminación</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    header, footer {
+      background-color: #006400;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background-color: #228B22;
+      color: white;
+      padding: 0.5em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 100, 0, 0.2);
+    }
+    h1, h2 {
+      color: #006400;
+    }
+    footer {
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AgroSorb</h1>
-    </header>
+  <header>
+    <h1>AgroSorb</h1>
+    <p>Soluciones naturales para la remediación de contaminantes agroquímicos</p>
+  </header>
 
-    <section>
-        <h2>Nuestro Proyecto</h2>
-        <p>El presente proyecto tiene como finalidad la evaluación de biomasa modificada (aserrín y cáscara de arroz) como adsorbente natural para combatir la contaminación por glifosato en suelos agrícolas de la región de Tres Quebradas (provincia de Los Santos) y aguas superficiales o subterráneas del mismo lugar. El estudio se enfocará en determinar la eficacia de dos métodos de activación accesibles: activación casera (vinagre o ceniza) y activación química suave (H₃PO₄).</p>
-        <div class="carrusel">[Carrusel de imágenes aquí]</div>
-    </section>
+  <nav>
+    <a href="#problema">Problema</a>
+    <a href="#objetivo">Objetivo</a>
+    <a href="#propuesta">Propuesta</a>
+    <a href="#impacto">Impacto</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-    <section class="integrantes">
-        <h2>Integrantes</h2>
-        <div><img src="ana.jpg" alt="Ana Lucia González"> Ana Lucia González – Investigadora</div>
-        <div><img src="jorge.jpg" alt="Jorge Alexis González"> Jorge Alexis González – Coinvestigador</div>
-        <div>Jose Benavides – Profesor coordinador</div>
-        <div>Ing. Manuel Jiménez – Mentor asignado</div>
-    </section>
+  <section id="problema">
+    <h2>¿Cuál es el problema?</h2>
+    <p>El uso excesivo de agroquímicos como el glifosato y el gramoxone en la agricultura ha generado un grave problema de contaminación en los suelos y fuentes hídricas, especialmente en la provincia de Los Santos. Estos compuestos no solo afectan la biodiversidad, sino que también ponen en riesgo la salud humana y el equilibrio de los ecosistemas.</p>
+  </section>
 
-    <section>
-        <h2>Proyecto</h2>
-        <h3>Biomasa modificada como adsorbente para reducir la presencia de contaminantes agroquímicos en suelos y aguas de la provincia de Los Santos</h3>
-        <div class="indice">
-            <h4>Índice</h4>
-            <ul>
-                <li><a href="#antecedentes">Antecedentes</a></li>
-                <li><a href="#problema">Planteamiento del problema</a></li>
-                <li><a href="#justificacion">Justificación</a></li>
-                <li><a href="#objetivos">Objetivos</a></li>
-                <li><a href="#preguntas">Preguntas de la investigación</a></li>
-                <li><a href="#hipotesis">Hipótesis</a></li>
-                <li><a href="#metodologia">Metodología</a></li>
-                <li><a href="#referencias">Referencias bibliográficas</a></li>
-            </ul>
-        </div>
-        <div id="antecedentes"><h4>Antecedentes</h4><p>[Contenido completo de antecedentes aquí]</p></div>
-        <div id="problema"><h4>Planteamiento del problema</h4><p>[Contenido completo del problema aquí]</p></div>
-        <div id="justificacion"><h4>Justificación</h4><p>[Contenido completo de justificación aquí]</p></div>
-        <div id="objetivos"><h4>Objetivos</h4><p>[Contenido completo de objetivos aquí]</p></div>
-        <div id="preguntas"><h4>Preguntas de la investigación</h4><p>[Contenido completo de preguntas aquí]</p></div>
-        <div id="hipotesis"><h4>Hipótesis</h4><p>[Contenido completo de hipótesis aquí]</p></div>
-        <div id="metodologia"><h4>Metodología</h4><p>[Contenido completo de metodología aquí]</p></div>
-        <div id="referencias"><h4>Referencias bibliográficas</h4><p>[Contenido completo de referencias aquí]</p></div>
-    </section>
+  <section id="objetivo">
+    <h2>Objetivo del Proyecto</h2>
+    <p>Desarrollar un adsorbente natural, económico y sostenible a base de residuos agrícolas modificados (como cáscara de arroz y aserrín), que permita reducir la presencia de glifosato y gramoxone en suelos y aguas contaminadas, contribuyendo así a la restauración ambiental en áreas como Tres Quebradas y el Río Guararé.</p>
+  </section>
+
+  <section id="propuesta">
+    <h2>Nuestra Propuesta</h2>
+    <ul>
+      <li>Recolección de biomasa local como cáscara de arroz y aserrín.</li>
+      <li>Aplicación de métodos de modificación natural, térmica o química suave para activar su capacidad adsorbente.</li>
+      <li>Evaluación de la eficacia del material en la adsorción de contaminantes en condiciones reales.</li>
+    </ul>
+  </section>
+
+  <section id="impacto">
+    <h2>Impacto Esperado</h2>
+    <p>Con AgroSorb se espera ofrecer una alternativa ecológica y de bajo costo para mitigar los efectos de la contaminación agroquímica, empoderando a las comunidades rurales con soluciones accesibles y sostenibles. Además, se promueve el reciclaje de residuos agrícolas y el cuidado de los recursos naturales.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Equipo de Investigación:</strong> Ana (investigación y metodología) y Jorge (creatividad e innovación)</p>
+    <p><strong>Programa:</strong> Jóvenes Científicos - SENACYT 2025</p>
+    <p><strong>Correo:</strong> contacto@agrosorb.org</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AgroSorb. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
