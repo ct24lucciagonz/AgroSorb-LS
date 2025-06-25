@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Biomasa como Adsorbente</title>
+  <title>Biomasa Adsorbente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
-      margin: 0; padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      line-height: 1.6;
+      background: #f5fff2;
     }
 
     header {
-      background: #2b9348;
+      background-color: #2b9348;
       color: white;
-      padding: 10px 20px;
+      padding: 15px 20px;
       position: fixed;
       width: 100%;
       top: 0;
@@ -47,36 +48,62 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
 
-    section {
-      padding: 80px 20px 40px;
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .section {
+      display: none;
+      padding: 100px 20px 40px;
       min-height: 100vh;
     }
 
-    #inicio { background: #d9ed92; }
-    #integrantes { background: #b5e48c; }
-    #proyecto { background: #99d98c; }
-    #bitacora { background: #76c893; }
-    #contacto { background: #52b69a; }
+    .active {
+      display: block;
+    }
+
+    #inicio { background-color: #e9fbe5; }
+    #integrantes { background-color: #d7f9dc; }
+    #proyecto { background-color: #c5f7d3; }
+    #bitacora { background-color: #b0efd0; }
+    #contacto { background-color: #a0e0c6; }
+
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #2b9348;
+      color: white;
+      cursor: pointer;
+    }
 
     footer {
-      background: #2b9348;
+      background-color: #2b9348;
       color: white;
       text-align: center;
       padding: 15px;
     }
 
-    /* Responsive menu */
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
-        background: #2b9348;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
         display: none;
+        width: 100%;
+        background-color: #2b9348;
+        position: absolute;
+        top: 60px;
+        left: 0;
       }
 
       nav ul.show {
@@ -84,14 +111,8 @@
       }
 
       .menu-toggle {
-        cursor: pointer;
-        font-size: 1.5em;
         display: block;
       }
-    }
-
-    .menu-toggle {
-      display: none;
     }
   </style>
 </head>
@@ -102,57 +123,71 @@
     <span class="menu-toggle" onclick="toggleMenu()">☰</span>
     <nav>
       <ul id="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#integrantes">Integrantes</a></li>
-        <li><a href="#proyecto">Proyecto</a></li>
-        <li><a href="#bitacora">Bitácora</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a onclick="showSection('inicio')">Inicio</a></li>
+        <li><a onclick="showSection('integrantes')">Integrantes</a></li>
+        <li><a onclick="showSection('proyecto')">Proyecto</a></li>
+        <li><a onclick="showSection('bitacora')">Bitácora</a></li>
+        <li><a onclick="showSection('contacto')">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="inicio">
-    <h2>Inicio</h2>
-    <p>Bienvenidos al proyecto de investigación científica: Biomasa modificada como adsorbente para reducir contaminantes agroquímicos.</p>
-  </section>
+  <main>
+    <section id="inicio" class="section active">
+      <h2>Inicio</h2>
+      <p>Bienvenidos al proyecto de investigación científica: Biomasa modificada como adsorbente para reducir contaminantes agroquímicos.</p>
+    </section>
 
-  <section id="integrantes">
-    <h2>Integrantes</h2>
-    <ul>
-      <li>Ana (Metodología e investigación)</li>
-      <li>Jorge (Innovación y presentación)</li>
-    </ul>
-  </section>
+    <section id="integrantes" class="section">
+      <h2>Integrantes</h2>
+      <ul>
+        <li>Ana (Metodología e investigación)</li>
+        <li>Jorge (Innovación y presentación)</li>
+      </ul>
+    </section>
 
-  <section id="proyecto">
-    <h2>Sobre el Proyecto</h2>
-    <p>Buscamos mitigar la presencia de agroquímicos como glifosato y gramoxone en suelos y aguas de Los Santos, usando biomasa activada naturalmente a partir de residuos agrícolas como cáscaras de arroz o aserrín.</p>
-  </section>
+    <section id="proyecto" class="section">
+      <h2>Sobre el Proyecto</h2>
+      <p>Buscamos mitigar la presencia de agroquímicos como glifosato y gramoxone en suelos y aguas de Los Santos, usando biomasa activada naturalmente a partir de residuos agrícolas como cáscaras de arroz o aserrín.</p>
+    </section>
 
-  <section id="bitacora">
-    <h2>Bitácora</h2>
-    <p>Aquí se documentarán los avances, pruebas, cambios y resultados del experimento durante el desarrollo del proyecto.</p>
-  </section>
+    <section id="bitacora" class="section">
+      <h2>Bitácora</h2>
+      <p>Aquí se documentarán los avances, pruebas, cambios y resultados del experimento durante el desarrollo del proyecto.</p>
+    </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>¿Tienes dudas o sugerencias? ¡Contáctanos!</p>
-    <form>
-      <input type="text" placeholder="Tu nombre" style="width: 100%; margin: 5px 0;"><br>
-      <input type="email" placeholder="Tu correo" style="width: 100%; margin: 5px 0;"><br>
-      <textarea placeholder="Mensaje" style="width: 100%; margin: 5px 0;"></textarea><br>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas o sugerencias? ¡Contáctanos!</p>
+      <form>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea placeholder="Mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Proyecto Biomasa Adsorbente - Jóvenes Científicos</p>
   </footer>
 
   <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+
+      const nav = document.getElementById('nav-links');
+      if (nav.classList.contains('show')) {
+        nav.classList.remove('show');
+      }
+    }
+
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('show');
     }
   </script>
 </body>
 </html>
+
