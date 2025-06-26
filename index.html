@@ -174,9 +174,6 @@
         <button type="submit">Enviar</button>
             <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
 
-  <footer>
-    <p>&copy; AgroSorb.Los Santos - Jóvenes Científicos 2025</p>
-  </footer>
 
   <script>
     function showSection(id) {
@@ -194,8 +191,25 @@
       document.getElementById('nav-links').classList.toggle('show');
     }
   </script>
-</body>
-</html>
+<footer>
+    <p>&copy; AgroSorb - Los Santos. Jóvenes Científicos 2025</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+
+      const nav = document.getElementById('nav-links');
+      if (nav.classList.contains('show')) {
+        nav.classList.remove('show');
+      }
+    }
+
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
   </script>
 </body>
 </html>
