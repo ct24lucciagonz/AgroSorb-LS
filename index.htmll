@@ -1,103 +1,302 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgroSorb - Soluciones Naturales para la Contaminación</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGROSORB.LS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f2f2f2;
-      color: #333;
     }
-    header, footer {
-      background-color: #006400;
-      color: white;
-      padding: 1em;
-      text-align: center;
+
+    body {
+      background: #f5fff2;
     }
-    nav {
-      background-color: #228B22;
+
+    header {
+      background-color: #2b9348;
       color: white;
-      padding: 0.5em;
-      text-align: center;
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav a {
+
+    header h1 {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+    }
+
+    header h1 img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-left: 15px;
+    }
+
+    nav ul li a {
       color: white;
-      margin: 0 1em;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
-    section {
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      margin-top: 1em;
-      margin-bottom: 1em;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 100, 0, 0.2);
+
+    .section {
+      display: none;
+      padding: 100px 20px 40px;
+      min-height: 100vh;
     }
-    h1, h2 {
-      color: #006400;
+
+    .gracias-section {
+      display: none;
+      background-color: #e5f5e0;
+      padding: 60px 20px;
+      text-align: center;
     }
+
+    .gracias-section.active {
+      display: block;
+    }
+
+    .gracias-section h2 {
+      color: #3b803f;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .gracias-section p {
+      font-size: 1.1em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .volver-btn {
+      background-color: #3b803f;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .volver-btn:hover {
+      background-color: #2f6632;
+    }
+
+    .active {
+      display: block;
+    }
+
+    #inicio { background-color: #e9fbe5; }
+    #integrantes { background-color: #d7f9dc; }
+    #proyecto { background-color: #c5f7d3; }
+    #bitacora { background-color: #b0efd0; }
+    #contacto { background-color: #a0e0c6; }
+
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #2b9348;
+      color: white;
+      cursor: pointer;
+    }
+
     footer {
-      font-size: 0.9em;
+      background-color: #2b9348;
+      color: white;
+      text-align: center;
+      padding: 15px;
     }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #2b9348;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 30px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-container {
+    flex-direction: row;
+  }
+}
   </style>
 </head>
 <body>
-  <header>
-    <h1>AgroSorb</h1>
-    <p>Soluciones naturales para la remediación de contaminantes agroquímicos</p>
-  </header>
 
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Logo AGROSORB" class="logo">
+    <h1>AGROSORB.LS</h1>
+  </div>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
   <nav>
-    <a href="#problema">Problema</a>
-    <a href="#objetivo">Objetivo</a>
-    <a href="#propuesta">Propuesta</a>
-    <a href="#impacto">Impacto</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="problema">
-    <h2>¿Cuál es el problema?</h2>
-    <p>El uso excesivo de agroquímicos como el glifosato y el gramoxone en la agricultura ha generado un grave problema de contaminación en los suelos y fuentes hídricas, especialmente en la provincia de Los Santos. Estos compuestos no solo afectan la biodiversidad, sino que también ponen en riesgo la salud humana y el equilibrio de los ecosistemas.</p>
-  </section>
-
-  <section id="objetivo">
-    <h2>Objetivo del Proyecto</h2>
-    <p>Desarrollar un adsorbente natural, económico y sostenible a base de residuos agrícolas modificados (como cáscara de arroz y aserrín), que permita reducir la presencia de glifosato y gramoxone en suelos y aguas contaminadas, contribuyendo así a la restauración ambiental en áreas como Tres Quebradas y el Río Guararé.</p>
-  </section>
-
-  <section id="propuesta">
-    <h2>Nuestra Propuesta</h2>
-    <ul>
-      <li>Recolección de biomasa local como cáscara de arroz y aserrín.</li>
-      <li>Aplicación de métodos de modificación natural, térmica o química suave para activar su capacidad adsorbente.</li>
-      <li>Evaluación de la eficacia del material en la adsorción de contaminantes en condiciones reales.</li>
+    <ul id="nav-links">
+      <li><a onclick="showSection('Sobre Nosotros')">Inicio</a></li>
+      <li><a onclick="showSection('Integrantes')">Integrantes</a></li>
+      <li><a onclick="showSection('Proyecto')">Proyecto</a></li>
+      <li><a onclick="showSection('Resultados')">Bitácora</a></li>
+      <li><a onclick="showSection('Contacto')">Contacto</a></li>
     </ul>
-  </section>
+  </nav>
+</header>
 
-  <section id="impacto">
-    <h2>Impacto Esperado</h2>
-    <p>Con AgroSorb se espera ofrecer una alternativa ecológica y de bajo costo para mitigar los efectos de la contaminación agroquímica, empoderando a las comunidades rurales con soluciones accesibles y sostenibles. Además, se promueve el reciclaje de residuos agrícolas y el cuidado de los recursos naturales.</p>
-  </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p><strong>Equipo de Investigación:</strong> Ana (investigación y metodología) y Jorge (creatividad e innovación)</p>
-    <p><strong>Programa:</strong> Jóvenes Científicos - SENACYT 2025</p>
-    <p><strong>Correo:</strong> contacto@agrosorb.org</p>
-  </section>
+  <main>
+    <section id="inicio" class="section active">
+      <h2>Biomasa modificada como adsorbente para reducir la presencia de contaminantes agroquímicos en suelos y aguas de la provincia de Los Santos.</h2>
+      <p>El presente proyecto tiene como finalidad la evaluación de biomasa modificada (aserrín y cáscara de arroz) como adsorbente natural para combatir la contaminación por glifosato en suelos agrícolas de la región de Tres Quebradas (provincia de Los Santos) y aguas superficiales o subterráneas del mismo lugar. El estudio se enfocará en determinar la eficacia de dos métodos de activación accesibles: activación casera (vinagre) y activación química suave (H₃PO₄).</p>
+    </section>
+
+    <section id="integrantes" class="section">
+      <h2>Integrantes</h2>
+      <div><img src="ana.jpg" alt="Ana Lucia González"> Ana Lucia González – Investigadora</div>
+      <div><img src="jorge.jpg" alt="Jorge Alexis González"> Jorge Alexis González – Coinvestigador</div>
+      <div>Jose Benavides – Profesor coordinador</div>
+      <div>Ing. Manuel Jiménez – Mentor asignado</div>
+    </section>
+
+    <section id="proyecto" class="section">
+      <h2>Sobre el Proyecto</h2>
+      <p>Buscamos mitigar la presencia de agroquímicos como el glifosato en suelos y aguas de Los Santos, usando biomasa activada naturalmente a partir de residuos agrícolas como cáscaras de arroz o aserrín.</p>
+      <div class="carrusel">[Carrusel de imágenes aquí]</div>
+    </section>
+
+    <section id="bitacora" class="section">
+      <h2>Posterior a los análisis</h2>
+      <p>Aquí se documentarán los resultados del proyecto en estadísticas, imágenes y cuadros.</p>
+      <div class="carrusel">[Carrusel de imágenes aquí]</div>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <p>¿Tiene dudas o sugerencias? ¡Contáctenos!</p>
+      <p>Teléfonos: +507 63042301 - +507 65592212</p>
+      <p>Correos: analuciagg27@icloud.com - alex0301gg@gmail.com</p>
+      <form action="https://formspree.io/f/mwpbwwyo" method="POST" onsubmit="mostrarGracias(event)">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo" required>
+        <textarea name="message" placeholder="Mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="gracias" class="gracias-section">
+        <h2>¡Gracias por contactarnos!</h2>
+        <p>Hemos recibido tu mensaje y te responderemos lo antes posible.</p>
+        <a href="#inicio" class="volver-btn" onclick="showSection('inicio')">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; Biomasa modificada como adsorbente para reducir la presencia de contaminantes agroquímicos en suelos y aguas de la provincia de Los Santos. Todos los derechos reservados.</p>
+    <p>&copy; Biomasa modificada como adsorbente para reducir la presencia de contaminantes agroquímicos en suelos y aguas de la provincia de Los Santos - Jóvenes Científicos 2025</p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+
+      const nav = document.getElementById('nav-links');
+      if (nav.classList.contains('show')) {
+        nav.classList.remove('show');
+      }
+    }
+
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+
+    function mostrarGracias(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          document.querySelector('#gracias').classList.add('active');
+          form.reset();
+        } else {
+          alert("Hubo un error al enviar el mensaje. Inténtalo nuevamente.");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
+    }
+  </script>
 </body>
 </html>
