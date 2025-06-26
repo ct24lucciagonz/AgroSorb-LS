@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Biomasa Adsorbente</title>
+  <title>AGROSORB.LS</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -62,6 +62,36 @@
       padding: 100px 20px 40px;
       min-height: 100vh;
     }
+.gracias-section {
+  background-color: #e5f5e0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gracias-section h2 {
+  color: #3b803f;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.gracias-section p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.volver-btn {
+  background-color: #3b803f;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.volver-btn:hover {
+  background-color: #2f6632;
+}
 
     .active {
       display: block;
@@ -119,7 +149,7 @@
 <body>
 
   <header>
-    <h1>Biomasa Adsorbente</h1>
+    <h1>AGROSORB.LS</h1>
     <span class="menu-toggle" onclick="toggleMenu()">☰</span>
     <nav>
       <ul id="nav-links">
@@ -167,14 +197,23 @@
       <p>Teléfonos: +507 63042301 - +507 65592212</p>
       <p>Correos: analuciagg27@icloud.com - alex0301gg@gmail.com</p>
       <form>
-          <form action="https://formspree.io/f/mwpbwwyo" method="POST"> 
+           <form action="https://formspree.io/f/mwpbwwyo" method="POST" class="contact-form">
         <input type="text" placeholder="Nombre" required>
         <input type="email" placeholder="Correo" required>
         <textarea placeholder="Mensaje" rows="4" required></textarea>
         <button type="submit">Enviar</button>
+            <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+
       </form>
     </section>
   </main>
+<section id="gracias" class="gracias-section">
+  <div class="container">
+    <h2>¡Gracias por contactarnos!</h2>
+    <p>Hemos recibido tu mensaje y te responderemos lo antes posible.</p>
+    <a href="#inicio" class="volver-btn">Volver al inicio</a>
+  </div>
+</section>
 
   <footer>
     <p>&copy; Biomasa modificada como adsorbente para reducir la presencia de contaminantes agroquímicos en suelos y aguas de la provincia de Los Santos - Jóvenes Científicos 2025</p>
