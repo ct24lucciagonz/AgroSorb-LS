@@ -54,7 +54,7 @@
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     nav ul {
@@ -126,6 +126,79 @@
       .menu-toggle {
         display: block;
       }
+    .carrusel {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carrusel img {
+  display: none;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carrusel img.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(43, 147, 72, 0.7);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.integrantes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.integrante {
+  text-align: center;
+  max-width: 200px;
+}
+
+.integrante img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.integrante p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.integrante p span {
+  display: block;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #555;
+}
     }
   </style>
 </head>
@@ -148,53 +221,78 @@
   <main>
     <section id="Sobre Nosotros" class="section active">
       <h2>Biomasa modificada como adsorbente para reducir la presencia de contaminantes agroquímicos en suelos y aguas de la provincia de Los Santos.</h2>
+    <img src="img/logo33-removebg-preview.png" alt="Adsorbente natural" style="max-width: 100%; height: auto; margin: 20px 0; border-radius: 10px;">  <p>El presente proyecto tiene como finalidad la evaluación de biomasa modificada (aserrín y cáscara de arroz) como adsorbente natural para combatir la contaminación por glifosato en suelos agrícolas de la región de Tres Quebradas (provincia de Los Santos) y aguas superficiales o subterráneas del mismo lugar. El estudio se enfocará en determinar la eficacia de dos métodos de activación accesibles: activación casera (vinagre) y activación química suave (H₃PO₄).</p>
       <p>El presente proyecto tiene como finalidad la evaluación de biomasa modificada (aserrín y cáscara de arroz) como adsorbente natural para combatir la contaminación por glifosato en suelos agrícolas de la región de Tres Quebradas (provincia de Los Santos) y aguas superficiales o subterráneas del mismo lugar. El estudio se enfocará en determinar la eficacia de dos métodos de activación accesibles: activación casera (vinagre) y activación química suave (H₃PO₄).</p>
     </section>
 
-    <section id="Integrantes" class="section">
-      <h2>Integrantes</h2>
-      <div><img src="ana.jpg" alt="Ana Lucia González"> Ana Lucia González – Investigadora</div>
-      <div><img src="jorge.jpg" alt="Jorge Alexis González"> Jorge Alexis González – Coinvestigador</div>
-      <div>Jose Benavides – Profesor coordinador</div>
-      <div>Ing. Manuel Jiménez – Mentor asignado</div>
-    </section>
+ <section id="Integrantes" class="section">
+  <h2>Integrantes</h2>
+  <div class="integrantes-grid">
+    <div class="integrante">
+      <img src="img/ana.jpg" alt="Ana Lucia González">
+      <p>Ana Lucia González<br><span>Investigadora</span></p>
+    </div>
+    <div class="integrante">
+      <img src="img/jorge.jpg" alt="Jorge Alexis González">
+      <p>Jorge Alexis González<br><span>Coinvestigador</span></p>
+    </div>
+    <div class="integrante">
+      <p>Jose Benavides<br><span>Profesor coordinador</span></p>
+    </div>
+    <div class="integrante">
+      <p>Ing. Manuel Jiménez<br><span>Mentor asignado</span></p>
+    </div>
+  </div>
+</section>
 
-    <section id="Proyecto" class="section">
-      <h2>Sobre el Proyecto</h2>
-      <p>Buscamos mitigar la presencia de agroquímicos como el glifosato en suelos y aguas de Los Santos, usando biomasa activada naturalmente a partir de residuos agrícolas como cáscaras de arroz o aserrín.</p>
-      <div class="carrusel">[Carrusel de imágenes aquí]</div>
-    </section>
+<section id="Proyecto" class="section">
+  <h2>Sobre el Proyecto</h2>
+  <p>Buscamos mitigar la presencia de agroquímicos como el glifosato en suelos y aguas de Los Santos, usando biomasa activada naturalmente a partir de residuos agrícolas como cáscaras de arroz o aserrín.</p>
+
+  <div class="carrusel">
+    <img src="img/proyecto1.jpg" class="slide active" alt="Imagen del proyecto 1">
+    <img src="img/proyecto2.jpg" class="slide" alt="Imagen del proyecto 2">
+    <img src="img/proyecto3.jpg" class="slide" alt="Imagen del proyecto 3">
+    <button class="prev" onclick="cambiarSlide(-1, this)">❮</button>
+    <button class="next" onclick="cambiarSlide(1, this)">❯</button>
+  </div>
+</section>
 
     <section id="Resultados" class="section">
-      <h2>Posterior a los análisis</h2>
-      <p>Aquí se documentarán los resultados del proyecto en estadísticas, imágenes y cuadros.</p>
-      <div class="carrusel">[Carrusel de imágenes aquí]</div>
-    </section>
+  <h2>Posterior a los análisis</h2>
+  <p>Aquí se documentarán los resultados del proyecto en estadísticas, imágenes y cuadros.</p>
 
+  <div class="carrusel">
+    <img src="img/resultado1.jpg" class="slide active" alt="Gráfico de resultados 1">
+    <img src="img/resultado2.jpg" class="slide" alt="Gráfico de resultados 2">
+    <img src="img/resultado3.jpg" class="slide" alt="Gráfico de resultados 3">
+    <button class="prev" onclick="cambiarSlide(-1, this)">❮</button>
+    <button class="next" onclick="cambiarSlide(1, this)">❯</button>
+  </div>
+</section>
+   
     <section id="Contacto" class="section">
-      <h2>Contacto</h2>
+    <h2>Contacto</h2>
       <p>¿Tiene dudas o sugerencias? ¡Contáctenos!</p>
-      <p>Teléfonos: +507 63042301 - +507 65592212</p>
-      <p>Correos: analuciagg27@icloud.com - alex0301gg@gmail.com</p>
+     <p>Teléfonos: +507 63042301 - +507 65592212</p>
+   <p>Correos: analuciagg27@icloud.com - alex0301gg@gmail.com</p>
       <form action="https://formspree.io/f/mwpbwwyo" method="POST" class="contact-form">
         <input type="text" name="nombre" placeholder="Nombre" required>
         <input type="email" name="email" placeholder="Correo" required>
-        <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+      <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
         <button type="submit">Enviar</button>
         <!-- <input type="hidden" name="_redirect" value="..."> -->
       </form>
     </section>
   </main>
-
   <footer>
-    <p>&copy; 2025 Proyecto Biomasa Adsorbente - Jóvenes Científicos</p>
+    <p>&copy;  AgroSorb - Jóvenes Científicos 2025</p>
   </footer>
-
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('.section');
       sections.forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+    document.getElementById(id).classList.add('active');
 
       const nav = document.getElementById('nav-links');
       if (nav.classList.contains('show')) {
@@ -206,5 +304,34 @@
       document.getElementById('nav-links').classList.toggle('show');
     }
   </script>
+<script>
+  function mostrarSlide(carrusel, index) {
+    const slides = carrusel.querySelectorAll('.slide');
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function cambiarSlide(n, btn) {
+    const carrusel = btn.parentElement;
+    let index = parseInt(carrusel.getAttribute('data-index') || '0');
+    const slides = carrusel.querySelectorAll('.slide');
+    index = (index + n + slides.length) % slides.length;
+    carrusel.setAttribute('data-index', index);
+    mostrarSlide(carrusel, index);
+  }
+
+  // Inicializar todos los carruseles al cargar la página
+  document.addEventListener('DOMContentLoaded', () => {
+    const carruseles = document.querySelectorAll('.carrusel');
+    carruseles.forEach(carrusel => {
+      carrusel.setAttribute('data-index', '0');
+      mostrarSlide(carrusel, 0);
+    });
+  });
+</script>
 </body>
 </html>
