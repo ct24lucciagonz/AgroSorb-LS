@@ -191,7 +191,7 @@ header h1 {
 
 <header>
   <div class="logo-container">
-    <img src="logo.png" alt="Logo AGROSORB" class="logo">
+    <img src="imagenes/logo33-removebg-preview.png" alt="Logo AGROSORB" class="logo">
     <h1>AGROSORB.LS</h1>
   </div>
   <span class="menu-toggle" onclick="toggleMenu()">☰</span>
@@ -215,8 +215,8 @@ header h1 {
 
     <section id="integrantes" class="section">
       <h2>Integrantes</h2>
-      <div><img src="ana.jpg" alt="Ana Lucia González"> Ana Lucia González – Investigadora</div>
-      <div><img src="jorge.jpg" alt="Jorge Alexis González"> Jorge Alexis González – Coinvestigador</div>
+      <div><img src="imagenes/ana.jpg" alt="Ana Lucia González"> Ana Lucia González – Investigadora</div>
+      <div><img src="imagenes/jorge.jpg" alt="Jorge Alexis González"> Jorge Alexis González – Coinvestigador</div>
       <div>Jose Benavides – Profesor coordinador</div>
       <div>Ing. Manuel Jiménez – Mentor asignado</div>
     </section>
